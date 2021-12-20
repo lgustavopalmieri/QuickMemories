@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainStyled = styled.div ` 
 
-    background-color: var(--color-three);
+    background-color: var(--color-one);
     width: 100%;
     height: 100%;
 

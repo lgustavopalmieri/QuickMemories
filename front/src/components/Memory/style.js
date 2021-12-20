@@ -12,6 +12,12 @@ export const MemoryStyled = styled.div `
     border-radius: 10px;
     border: solid 2px var(--color-four); 
 
+    & h5 {
+        max-height: 9%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
 `
 export const TextMemoStyled = styled.p `
 
