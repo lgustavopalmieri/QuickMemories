@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const MenuUserStyled = styled.div ` 
+export const MenuThemesStyled = styled.div ` 
 
     position: fixed;
     top: 50px;
-    left: 0px;
+    right: 0px;
 
     background-color: var(--color-one);
    
@@ -14,7 +14,7 @@ export const MenuUserStyled = styled.div `
     display: flex;
     flex-direction: column;
     
-    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
 
     h4 {
         margin-left: 60px;
@@ -25,7 +25,7 @@ export const MenuUserStyled = styled.div `
 
 `
 
-export const OverlayMenuUserStyled = styled.div ` 
+export const OverlayMenuThemesStyled = styled.div ` 
 
     width: 100%;
     height: 100%;
