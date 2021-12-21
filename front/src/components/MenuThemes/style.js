@@ -33,6 +33,7 @@ export const OverlayMenuThemesStyled = styled.div `
     bottom: 0;
     left: 0;
     right: 0;
+    
 
     position: fixed;
     top: 50px;    

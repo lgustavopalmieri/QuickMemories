@@ -1,10 +1,14 @@
 import Layout from "./components/Layout";
 import GlobalStyles from "./styles/GlobalStyles";
+import { MemoryContextProvider } from "./contexts/MemoriesContext"
 
 function App() {
   return (
     < >
-      <Layout />
+      <MemoryContextProvider>
+        <Layout />
+      </MemoryContextProvider>
+      
       <GlobalStyles />
     </>
   );

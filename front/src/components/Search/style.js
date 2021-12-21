@@ -10,4 +10,6 @@ export const SearchStyle = styled.input `
 
     padding: 3px 10px;
 
+    
+
 `
