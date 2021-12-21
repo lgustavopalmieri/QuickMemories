@@ -7,6 +7,7 @@ export default function Main () {
             <Memory />
             <Memory />
             <Memory />
+            <Memory />
         </MainStyled>
     )
 }

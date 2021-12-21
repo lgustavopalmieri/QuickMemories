@@ -8,6 +8,7 @@ export const MainStyled = styled.div `
 
     padding: 10px 15px;
     display: flex;
+    flex-wrap: wrap;
     
     gap: 15px;
     
