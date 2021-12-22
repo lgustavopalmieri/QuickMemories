@@ -58,7 +58,7 @@ module.exports = {
     async delete(request, response){
 
         try {
-            await response.produto.remove();
+            await response.memory.remove();
             return response.status(200).json({ message:"Memory deleted."})
         } catch (err) {
             return response.status(500).json({ error: err.message })
