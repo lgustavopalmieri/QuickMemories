@@ -16,6 +16,8 @@ export const MenuUserStyled = styled.div `
     
     border-bottom-right-radius:15px;
 
+    
+
     h4 {
         margin-left: 60px;
         margin-top: 25px;
@@ -37,4 +39,5 @@ export const OverlayMenuUserStyled = styled.div `
     position: fixed;
     top: 50px;    
 
+    z-index: 10;
 `

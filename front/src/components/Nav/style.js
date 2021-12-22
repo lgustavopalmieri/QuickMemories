@@ -21,6 +21,7 @@ export const LeftStyled = styled.div `
     justify-content: space-between;
     align-items: center;
 
+   
 `
 
 export const RightStyled = styled.div` 
@@ -28,6 +29,7 @@ export const RightStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     
 
 `

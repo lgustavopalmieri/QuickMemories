@@ -9,12 +9,17 @@ export function MemoryContextProvider ({ children }) {
     const [openMemoryModal, setOpenMemoryModal] = useState(false);
 
 
+
+    function modalClose (){
+        setOpenMemoryModal(false)
+    }
+
     function handleAdd(){
         setOpenMemoryModal(true)
     }
 
     return (
-        <MemoryContext.Provider value={{handleAdd}}>
+        <MemoryContext.Provider value={{handleAdd, modalClose}}>
             {children}
             {openMemoryModal && <MemoryModal />}
         </MemoryContext.Provider>
