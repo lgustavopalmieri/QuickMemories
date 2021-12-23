@@ -1,34 +1,39 @@
-import React from "react";
-import { MemoryContainer ,MemoryStyled, TextMemoStyled,TitleMemoStyled, FooterMemoStyled } from "./style";
+import React,{ useContext } from "react";
+import { MemoryContainer, ButtonArea, Button } from "./style";
+import { MemoryContext } from "../../contexts/MemoriesContext";
+
+
 import { VscStarFull,VscTrash,VscEdit } from "react-icons/vsc"
 
-export default function Memory () {
+export default function Memory ({id, title, text, favorite}) {
+
+    const { handleEdit, handleFavorite, handleDelete } = useContext(MemoryContext);
+
     return (
 
-        <MemoryContainer >
-            <MemoryStyled>
-                <TitleMemoStyled>Ligar para padaria as 5 e 15 na sexta-feira fwa sda dsadasd asdasd asdasdasd asd </TitleMemoStyled>
-                <TextMemoStyled>Lorem ipsum, dolor sit amet consectetur adipisicing
-                    elit. Id dolore ab illo quia minima officia
-                    officiis cupiditate eum explicabo,
-                    suscipit cumque veritatis numquam accusantium
-                    architecto minus alias, eligendi nobis tempore.
-                    elit. Id dolore ab illo quia minima officia
-                    officiis cupiditate eum explicabo,
-                    suscipit cumque veritatis numquam accusantium
-                    architecto minus alias, eligendi nobis tempore.
-                    elit. Id dolore ab illo quia minima officia
-                    officiis cupiditate eum explicabo,
-                    suscipit cumque veritatis numquam accusantium
-                    architecto minus alias, eligendi nobis tempore.
-                </TextMemoStyled>
-            </MemoryStyled>
-            <FooterMemoStyled>
-                <VscStarFull />
-                <VscEdit />
-                <VscTrash />
-            </FooterMemoStyled>
-        </MemoryContainer>
+        <li>
+            <MemoryContainer >
+                <h3>{title}</h3>
+                <p>{text}</p>
+                <ButtonArea>
+
+                    <Button favorite={favorite} onClick={() => handleFavorite(id)}>
+                        <VscStarFull />
+                    </Button>
+
+                    <Button onClick={() => handleEdit (title, text, id)}>
+                        <VscEdit />
+                    </Button>
+
+                    <Button onClick={() => handleDelete(id)}>
+                        <VscTrash />
+                    </Button> 
+
+                </ButtonArea>
+            </MemoryContainer>
+        </li>
+
+        
         
     )
 }

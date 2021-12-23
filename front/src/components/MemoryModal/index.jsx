@@ -2,26 +2,34 @@ import React, { useContext } from "react";
 import { MemoryContext } from "../../contexts/MemoriesContext"
 
 import { OverlayMemoryModal, HeaderModal, MemoryModalStyled, FormContainer, InputGroup } from "./style";
-import { VscPassFilled } from "react-icons/vsc"
+import { VscChromeClose } from "react-icons/vsc"
 
 
 export default function MemoryModal(){
-    const { modalClose } = useContext(MemoryContext)
+    const { modalClose,title, titleHandler, text, textHandler, handleSubmit } = useContext(MemoryContext)
+
+
     return(
         <OverlayMemoryModal>
             <MemoryModalStyled>
                 <HeaderModal>
-                    <VscPassFilled onClick={modalClose}/>                    
+                    <button type="button" onClick={modalClose}>
+                        <VscChromeClose />
+                    </button>                                       
                 </HeaderModal>
-                <FormContainer>
+
+                <FormContainer onSubmit={handleSubmit}>                    
                     <InputGroup>
                         <label htmlFor="title">Title</label>
-                        <input id="title" type="text" />
+                        <input id="title" type="text" value={title} onChange={titleHandler}/>
                     </InputGroup>
                     <InputGroup>
-                        <label htmFor="memo">Memo</label>
-                        <textarea id="memo" type="textarea" />
+                        <label htmlFor="text">Memo</label>
+                        <textarea id="text" type="text" value={text} onChange={textHandler}/>
                     </InputGroup>
+                    <button type="submit">
+                        Submit
+                    </button>
                 </FormContainer>
 
                

@@ -1,19 +1,21 @@
 import styled from "styled-components";
 
-export const HeaderModal = styled.div ` 
+export const HeaderModal = styled.header ` 
 
     display: flex;
-    justify-content: space-between;
+    
     align-items: center;
-    height: 10%;
-    padding: 15px 20px;
+    height: 7%;
+    padding: 15px 5px;
+    flex-direction: row-reverse;
+    
 
-    svg {
+    button {
         background: none;
         border: none;
 
-        width: 25px;
-        height: 25px;
+        width: 45px;
+        height: 45px;
         
         color: var(--color-five);
         cursor: pointer;
@@ -57,16 +59,30 @@ export const OverlayMemoryModal = styled.div `
 
 `
 
-export const FormContainer = styled.div ` 
+export const FormContainer = styled.form ` 
 
     display: flex;
     flex-direction: column;
     
     padding: 0px 20px;
     width: 100%;
-    height: 85%;
+    height: 87%;
     justify-content: space-between;
 
+    button {
+        height:35px;
+        background-color: var(--color-five);
+        border: none;
+        border-radius:5px;
+        cursor:pointer;
+        color: var(--color-two);
+        font-size: 1rem;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }    
 `
 
 export const InputGroup = styled.div` 

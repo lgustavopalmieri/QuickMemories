@@ -7,62 +7,63 @@ export const MemoryContainer = styled.div `
     justify-content: space-between;
 
 
-    max-width: 200px;
-    max-height: 300px;
+    width: 200px;
+    height: 300px;
     background-color: transparent;
     box-sizing: border-box;
     border-radius: 10px;
     padding:10px;      
     border: solid 2px var(--color-four);
 
+    h3{
+        overflow: hidden;
+        height: 40px;
+        
+        white-space: nowrap;        
+        
+    }
+
+    p{
+        
+        overflow: hidden;
+        word-break:break-all;
+    }
+
 `
 
-export const MemoryStyled = styled.div ` 
 
-    max-height:250px ;
-    overflow-y: hidden;  
-    transition: opacity 0.2s;
-
-`
-export const TextMemoStyled = styled.p `
-
-    overflow-wrap: break-word;
-    margin-bottom : 10px ;
-    font-size: 0.8rem;
-    line-height: 1.6;
-    
-`
-
-export const FooterMemoStyled = styled.footer ` 
+export const ButtonArea = styled.footer ` 
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  
+    margin-top:16px;
+
+`
+
+
+export const Button = styled.button ` 
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: opacity 0.2s ease-out;
 
     svg {
-        background: none;
-        border: none;
 
         width: 20px;
         height: 20px;
         
         color: var(--color-five);
-        cursor: pointer;
-        transition: opacity 0.2s;
-
-        &:hover {
-            opacity: 0.8;
-            color: var(--color-four);
-        }
+        color: ${(props) => (props.favorite ? "#3d898d" : "#2f404d")};
+        
     }
 
-`
+    &:hover {
+            opacity: 0.5;
+            color: var(--color-four);
+        }
 
-export const TitleMemoStyled = styled.div `   
 
-    max-height:1.2rem;
-    margin-bottom: 5px;
-    overflow-y: hidden;  
-    font-weight: 800;
-    color: var(--color-five);
 
 `
