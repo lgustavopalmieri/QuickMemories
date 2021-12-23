@@ -13,7 +13,7 @@ routes.put("/memories/:id", MemoryMiddleware.validateId, MemoryController.update
 
 routes.delete("/memories/:id", MemoryMiddleware.validateId, MemoryController.delete)
 
-
+routes.patch("/memories/:id", MemoryMiddleware.validateId, MemoryController.updateFavorite)
 
 
 module.exports = routes

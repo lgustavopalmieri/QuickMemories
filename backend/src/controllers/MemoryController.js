@@ -63,6 +63,17 @@ module.exports = {
         } catch (err) {
             return response.status(500).json({ error: err.message })
         }
+    },
+
+    async updateFavorite(request, response) {
+        response.memory.favorite = response.memory.favorite
+
+        try {
+            await response.memory.save()
+            return response.status(200).json({ message:`${response.memory.favorite ? "favorite" : "unfavorite"}`})
+        } catch (err){
+            response.status(400).json({ error: err.message})
+        }
     }
 
 }
